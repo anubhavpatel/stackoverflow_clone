@@ -36,17 +36,20 @@ const Auth = () => {
           </div>
          
           <input type="password" name='password' id='password' />
-          { isSignup && <p style={{color : "#666767" , fontSize:"13px"}}>Passwords must contain at least eight <br/>characters, including at least 1 letter and <br/>1 number.</p>}
+          { isSignup && <p style={{color : "#666767" , fontSize:"11px"}}>Passwords must contain at least eight <br/>characters, including at least 1 letter and <br/>1 number.</p>}
           { isSignup && 
-      <div className='checkbx'>
-          <input type="checkbox" id='check'/>
-            <p style={{fontSize: "13px"}}>
-            Opt-in to receive occasional<br/> product updates, user research invitations,<br/> company announcements, and digests.<br/>
-            </p>
-      </div>
+             <section  id="serv" class="services">
+             <div class="basic">
+                <input type="checkbox" />
+             </div>  
+             <div class="pro">
+               <p style={{color : "#666767" , fontSize:"13px"}}>Opt-in to receive occasional product<br/> updates, user research invitations,<br/> company announcements, and digests.</p>
+                
+             </div> 
+             </section>
           }
           <button type='submit'  className='auth-btn' id='auth-btn'>{isSignup ? 'Sign up' : 'Log in'}</button>
-          { isSignup && <p style={{color : "#666767" , fontSize:"13px"}}>
+          { isSignup && <p style={{color : "#666767" , fontSize:"14px"}}>
             By clicking “Sign up”, you agree to our
             <span style={{color : "#007ac6"}}> terms of<br/>  service</span>,
             <span style={{color : "#007ac6"}}> privacy policy</span>
