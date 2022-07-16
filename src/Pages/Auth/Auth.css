@@ -1,0 +1,95 @@
+.auth-section{
+    min-height: 100vh;
+    margin: 0% auto;
+    background-color: #d5d7da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-logo{
+    padding: 20px 30px;
+}
+.auth-container{
+    padding:  20px;
+    margin-top: 60px;
+    min-width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.auth-container form{
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+   justify-content: space-evenly;
+}
+.auth-container form label input{
+    padding:  9px;
+    width: calc(100% - 30px);
+    border: solid 1px #5C5C5C;
+   border-radius: 4px;
+    font-size: 11px;
+    
+}
+#auth-btn{
+    background-color: #009dff;
+    border: solid 1px #007ac6;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 11px;
+    font-weight: 500;
+    width: 100px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding:  10px 5px;
+
+}
+#auth-btn:hover{
+    background-color: #018ce3;
+}
+.handle-switch-btn{
+    background-color: transparent;
+    color: #007ac6;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+
+/* .auth-container-1 form label:nth-child(1) h4,
+.auth-container-1 form label:nth-child(2) h4,
+.auth-container form label:nth-child(3) h4{
+    margin-bottom: 5px;
+    margin-top: 10PX;
+} */
+
+#name{
+    padding:  10px;
+    width: calc(100% - 30px);
+    border: solid 1px #5C5C5C;
+   border-radius: 4px;
+    font-size: 10px;
+}
+h4{
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 9px;
+}
+.checkbx{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: flex-start;
+}
