@@ -1,5 +1,4 @@
 import React from 'react'
-import './AboutAuth.css'
 const AboutAuth = () => {
   return (
     <div className='auth-container-1'>

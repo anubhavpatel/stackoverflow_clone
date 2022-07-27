@@ -9,7 +9,7 @@ import './Navbar.css'
 const Navbar = () => {
   var User = null
   return (
-    <nav>
+    <nav className='min-nav'>
       <div className='navbar'>
                  <Link to='/Home' className='nav-item nav-logo'>
                   <img src={Stack} alt='stack' height={45} />

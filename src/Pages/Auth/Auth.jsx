@@ -8,62 +8,56 @@ const Auth = () => {
     setIsSignup(!isSignup)
   }
   return (
-    <section class='auth-section'>
-      {isSignup && 
-       <AboutAuth/>
-      }
-  <div class='auth-container'>
-{!isSignup && <img src={logo} height={60}  alt='stackoverflow' className='login-logo'/>}
+    <section className='auth-section'>
+     { isSignup && <AboutAuth/>}
+     <div className='auth-container-2'>
+      { !isSignup && <img src={logo} alt='stack-overflow' className='login-logo' width="32" height="37"/>}
       <form>
-        {   isSignup &&(
-          <lable htmlfor='name'>
-            <h4>Display Name</h4>
-            <input type="text" id='name' name='name'/>
 
-          </lable>
-        )
-
+        {
+          isSignup && (
+            <label htmlFor='name'>
+              <h4>Display name</h4>
+              <input type="text" id='name' name='name' />
+            </label>
+          )
         }
-        <label htmlfor ="email">
-          <h4 id='email'>Email</h4>
-          <input type="email" name='name' id='email'/>
-        </label>
 
-        <label htmlfor ="password">
-          <div style={{display: "flex" , justifyContent: "space-between"}}>
-          <h4 id='pass'>Password</h4>
-         { !isSignup && <p style={{color:"#007ac6", fontSize: "13px"}}> Forgot Password</p>}
-          </div>
-         
-          <input type="password" name='password' id='password' />
-          { isSignup && <p style={{color : "#666767" , fontSize:"11px"}}>Passwords must contain at least eight <br/>characters, including at least 1 letter and <br/>1 number.</p>}
-          { isSignup && 
-             <section  id="serv" class="services">
-             <div class="basic">
-                <input type="checkbox" />
-             </div>  
-             <div class="pro">
-               <p style={{color : "#666767" , fontSize:"13px"}}>Opt-in to receive occasional product<br/> updates, user research invitations,<br/> company announcements, and digests.</p>
-                
-             </div> 
-             </section>
-          }
-          <button type='submit'  className='auth-btn' id='auth-btn'>{isSignup ? 'Sign up' : 'Log in'}</button>
-          { isSignup && <p style={{color : "#666767" , fontSize:"14px"}}>
-            By clicking “Sign up”, you agree to our
-            <span style={{color : "#007ac6"}}> terms of<br/>  service</span>,
-            <span style={{color : "#007ac6"}}> privacy policy</span>
-               and <span style={{color : "#007ac6"}}>cookie policy</span></p>}
-         
+        <label htmlFor="email">
+          <h4>Email</h4>
+          <input type="email" name='email' id='email'/>
         </label>
-  
+        <label htmlFor="password"> 
+          <div style={{display: "flex", justifyContent: "space-between"}}>
+            <h4>Password</h4>
+            { !isSignup && <p style={{color:"#007ac6",fontSize: "13px"}}>Forget Password?</p> }
+          </div>
+          <input type="password" name='password' id='password'/>
+          { isSignup && <p style={{color:"#666767", fontSize: "13px"}}>Passwords must contain at least eight characters,<br />including at least 1 letter and 1 number.</p>}
+        </label>
+        { isSignup && (
+          <label htmlFor='check'>
+            <input type="checkbox" id='check' style={{ width: "15px"}}/>
+            <p style={{fontSize: "13px"}}>Opt-in to receive occasional product<br/> updates, user research invitations, company<br /> announcements, and digests.</p>
+          </label>
+        )
+        }
+        <button type='submit' className='auth-btn'>{ isSignup ? "Sign Up" : "Log in"}</button>
+        {
+          isSignup && (
+            <p style={{color:"#666767", fontSize: "13px"}}>By clicking “Sign up”, you agree to our 
+              <span style={{color:"#007ac6"}}> terms of<br /> service</span>, 
+              <span style={{color:"#007ac6"}}> privacy policy</span> and  
+              <span style={{color:"#007ac6"}}> cookie policy</span></p>
+          )
+        }
       </form>
       <p>
-            {isSignup ? 'already have an account?' : "Don't have an account?"}
-            <button type='button' className='handle-switch-btn' onClick={handleSwitch } >{isSignup ? 'Log in' : 'Sign up'}</button>
-          </p>
-  </div>
-  </section>
+        { isSignup ? "Already have an account?" : "Don't have an account? "}
+        <button type='button' className='handle-switch-btn' onClick={handleSwitch}>{ isSignup ? "Login" : "Signup"}</button>
+      </p>
+     </div>
+   </section>
   )
 }
 
