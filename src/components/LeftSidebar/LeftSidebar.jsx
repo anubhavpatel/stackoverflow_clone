@@ -12,7 +12,7 @@ const LeftSidebar = () => {
         </NavLink>
         <div className="side-nav-div">
           <div><p>Public</p></div>
-          <NavLink to='Question' className='side-nav-links' activeClassName="active" >
+          <NavLink to='/Questions' className='side-nav-links' activeClassName="active" >
             <img   src={earth} width="13px" height="13px" alt="globe"/>
             <p id='que'>Question</p>
           </NavLink>
