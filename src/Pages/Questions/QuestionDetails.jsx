@@ -100,7 +100,7 @@ const QuestionDetails = () => {
                      <div className="question-action-user">
                         <div>
                             <button type='button'>Share</button>
-                            <button type='button'>Delete kr betichod</button>
+                            <button type='button'>Delete</button>
                         </div>
                         <div>
                             <p>asked by {question.time}</p>
